@@ -118,8 +118,6 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(629, 633, 'tiles', '16', _back);
 	
-	this.add.sprite(27, 234, 'objects', 'Tree_3', _back);
-	
 	this.add.sprite(-11, 633, 'tiles', '12', _back);
 	
 	this.add.tileSprite(117, 633, 512, 128, 'tiles', '9', _back);
@@ -140,8 +138,6 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(759, 1030, 'tiles', '15', _back);
 	
-	this.add.sprite(29, 1233, 'objects', 'Tree_2', _back);
-	
 	this.add.sprite(509, 1494, 'objects', 'Mushroom_1', _back);
 	
 	this.add.sprite(729, 955, 'objects', 'Crate', _back);
@@ -152,21 +148,13 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(652, 878, 'objects', 'Crate', _back);
 	
-	this.add.sprite(1056, 491, 'objects', 'Tree_3', _back);
-	
 	this.add.sprite(1052, 724, 'objects', 'Mushroom_2', _back);
-	
-	this.add.sprite(1899, 1259, 'objects', 'Tree_3', _back);
 	
 	this.add.sprite(1855, 1457, 'objects', 'Crate', _back);
 	
 	this.add.sprite(1354, 340, 'objects', 'Mushroom_1', _back);
 	
-	this.add.sprite(1292, 107, 'objects', 'Tree_3', _back);
-	
 	this.add.sprite(-7, 446, 'objects', 'Bush (1)', _back);
-	
-	this.add.sprite(1642, 1110, 'objects', 'Tree_1', _back);
 	
 	this.add.tileSprite(-46, 1742, 2245, 201, 'tiles', '18', _back);
 	
@@ -298,9 +286,6 @@ Level.prototype.create = function () {
 	var _front = this.add.group();
 	_front.position.setTo(-11, -7);
 	
-	var _Tree_10 = this.add.sprite(1302, 1083, 'objects', 'Tree_3', _front);
-	_Tree_10.scale.setTo(0.7332871556082268, 0.7658318667609785);
-	
 	this.add.sprite(371, 465, 'objects', 'Bush (2)', _front);
 	
 	this.add.sprite(178, 464, 'objects', 'Bush (1)', _front);
@@ -308,10 +293,6 @@ Level.prototype.create = function () {
 	this.add.sprite(586, 997, 'objects', 'Stone', _front);
 	
 	this.add.sprite(783, 1007, 'objects', 'Bush (3)', _front);
-	
-	this.add.sprite(1181, 997, 'objects', 'Tree_2', _front);
-	
-	this.add.sprite(1601, 1253, 'objects', 'Tree_1', _front);
 	
 	this.add.sprite(2051, 1497, 'objects', 'Stone', _front);
 	
@@ -322,10 +303,6 @@ Level.prototype.create = function () {
 	this.add.sprite(1293, 351, 'objects', 'Bush (3)', _front);
 	
 	this.add.sprite(36, 1490, 'objects', 'Bush (1)', _front);
-	
-	this.add.sprite(292, 1506, 'objects', 'Tree_1', _front);
-	
-	this.add.sprite(331, 1273, 'objects', 'Tree_3', _front);
 	
 	this.add.sprite(594, 1486, 'objects', 'Sign_2', _front);
 	
