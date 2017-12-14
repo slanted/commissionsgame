@@ -75,8 +75,6 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(629, 1657, 'tiles', '16', _back);
 	
-	this.add.sprite(254, 1495, 'objects', 'Mushroom_2', _back);
-	
 	this.add.sprite(-11, 1657, 'tiles', '12', _back);
 	
 	this.add.tileSprite(117, 1657, 512, 128, 'tiles', '9', _back);
@@ -138,8 +136,6 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(759, 1030, 'tiles', '15', _back);
 	
-	this.add.sprite(509, 1494, 'objects', 'Mushroom_1', _back);
-	
 	this.add.sprite(729, 955, 'objects', 'Crate', _back);
 	
 	this.add.sprite(652, 955, 'objects', 'Crate', _back);
@@ -148,11 +144,7 @@ Level.prototype.create = function () {
 	
 	this.add.sprite(652, 878, 'objects', 'Crate', _back);
 	
-	this.add.sprite(1052, 724, 'objects', 'Mushroom_2', _back);
-	
 	this.add.sprite(1855, 1457, 'objects', 'Crate', _back);
-	
-	this.add.sprite(1354, 340, 'objects', 'Mushroom_1', _back);
 	
 	this.add.sprite(-7, 446, 'objects', 'Bush (1)', _back);
 	
