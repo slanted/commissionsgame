@@ -7,6 +7,8 @@ window.onload = function() {
 	game.state.add("SharingRules", SharingRules);
 	game.state.add("Congrats", Congrats);
 	game.state.add("Level", Level);
+	game.state.add("QualifyingRules", QualifyingRules);
+	game.state.add("Level2", Level2);
 
 	game.state.start("Menu");
 };

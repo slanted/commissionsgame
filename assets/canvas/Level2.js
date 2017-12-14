@@ -6,20 +6,20 @@
 
 var groupSalesVolume = 0, personalSalesVolume = 0, percentDone, progress, numberDistributors = 0, congrats;
 /**
- * Level.
+ * Level2.
  */
-function Level() {
+function Level2() {
 	
 	Phaser.State.call(this);
 	
 }
 
 /** @type Phaser.State */
-var Level_proto = Object.create(Phaser.State.prototype);
-Level.prototype = Level_proto;
-Level.prototype.constructor = Level;
+var Level2_proto = Object.create(Phaser.State.prototype);
+Level2.prototype = Level2_proto;
+Level2.prototype.constructor = Level2;
 
-Level.prototype.init = function () {
+Level2.prototype.init = function () {
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;
@@ -27,15 +27,15 @@ Level.prototype.init = function () {
 	
 };
 
-Level.prototype.preload = function () {
+Level2.prototype.preload = function () {
 	
-	this.load.pack('level', 'assets/pack.json');
+	this.load.pack('level2', 'assets/pack2.json');
   this.load.image('bar', 'assets/images/bar.png');
   this.load.image('congrats', 'assets/images/congrats.png')
 
 };
 
-Level.prototype.create = function () {
+Level2.prototype.create = function () {
 	
 	this.beforeCreate();
 	
@@ -372,7 +372,7 @@ Level.prototype.create = function () {
 
 /* --- end generated code --- */
 
-Level.prototype.beforeCreate = function() {
+Level2.prototype.beforeCreate = function() {
 	// world
 	this.world.resize(2200, 1800);
 
@@ -386,56 +386,54 @@ Level.prototype.beforeCreate = function() {
 	this.cursors = this.input.keyboard.createCursorKeys();
 };
 
-Level.prototype.afterCreate = function () {
+Level2.prototype.afterCreate = function () {
 	this.camera.follow(this.fPlayer);
 };
 
-Level.prototype.update = function() {
+Level2.prototype.update = function() {
 	this.physics.arcade.collide(this.fPlayer, this.fCollisionLayer);
   var playerOverlap = this.physics.arcade.overlap(this.fPlayer, this.fFruits, collectFruit, null, this);
-	if (!congrats.visible)
-	{
-    if (this.cursors.left.isDown) {
-      // move to the left
-      this.fPlayer.body.velocity.x = -200;
-    } else if (this.cursors.right.isDown) {
-      // move to the right
-      this.fPlayer.body.velocity.x = 200;
-    } else {
-      // dont move in the horizontal
-      this.fPlayer.body.velocity.x = 0;
-    }
+	if (this.cursors.left.isDown) {
+		// move to the left
+		this.fPlayer.body.velocity.x = -200;
+	} else if (this.cursors.right.isDown) {
+		// move to the right
+		this.fPlayer.body.velocity.x = 200;
+	} else {
+		// dont move in the horizontal
+		this.fPlayer.body.velocity.x = 0;
+	}
 
-    // a flag to know if the player is (down) touching the platforms
-    var touching = this.fPlayer.body.touching.down;
+	// a flag to know if the player is (down) touching the platforms
+	var touching = this.fPlayer.body.touching.down;
 
-    if (touching && this.cursors.up.isDown) {
-      // jump if the player is on top of a platform and the up key is pressed
-      this.fPlayer.body.velocity.y = -600;
-    }
-
-    if (touching) {
-      if (this.fPlayer.body.velocity.x == 0) {
-        // if it is not moving horizontally play the idle
-        this.fPlayer.play("idle");
-      } else {
-        // if it is moving play the walk
-        this.fPlayer.play("walk");
-      }
-    } else {
-      // it is not touching the platforms so it means it is jumping.
-      this.fPlayer.play("jump");
-    }
-
-		// update the facing of the player
-		if (this.cursors.left.isDown) {
-				// face left
-				this.fPlayer.scale.x = -1;
-		} else if (this.cursors.right.isDown) {
-			 // face right
-			 this.fPlayer.scale.x = 1;
-		}
-  }
+	if (touching && this.cursors.up.isDown) {
+		// jump if the player is on top of a platform and the up key is pressed
+		this.fPlayer.body.velocity.y = -600;
+	}
+	
+	if (touching) {
+	    if (this.fPlayer.body.velocity.x == 0) {
+	        // if it is not moving horizontally play the idle
+	        this.fPlayer.play("idle");
+	    } else {
+	        // if it is moving play the walk
+	        this.fPlayer.play("walk");
+	    }
+	} else {
+	    // it is not touching the platforms so it means it is jumping.
+	    this.fPlayer.play("jump");
+	}
+	
+	// update the facing of the player
+	if (this.cursors.left.isDown) {
+	    // face left
+	    this.fPlayer.scale.x = -1;
+	} else if (this.cursors.right.isDown) {
+	   // face right
+	   this.fPlayer.scale.x = 1;
+	}
+	
 	// fruits
 	this.physics.arcade.overlap(this.fPlayer, this.fFruits, this.playerVsFruit, null, this);
 	
@@ -449,9 +447,7 @@ Level.prototype.update = function() {
   if (numberDistributors > 0 && groupSalesVolume > 100)
 	{
 		congrats.visible = true;
-    this.fPlayer.play("idle");
-    this.fPlayer.body.velocity.x = 0;
-    this.fPlayer.body.velocity.y = 0;
+		this.game.paused = true;
 	}
 };
 
@@ -461,7 +457,7 @@ Level.prototype.update = function() {
  * @param {Phaser.Sprite}
  *            fruit
  */
-Level.prototype.playerVsFruit = function(player, fruit) {
+Level2.prototype.playerVsFruit = function(player, fruit) {
 	fruit.body.enable = false;
 	
 	this.add.tween(fruit).to({
@@ -478,9 +474,9 @@ Level.prototype.playerVsFruit = function(player, fruit) {
 	}, 1000, "Linear", true).onComplete.add(fruit.kill, fruit);
 };
 
-Level.prototype.nextLevel = function()
+Level2.prototype.nextLevel = function()
 {
-  this.game.state.start("QualifyingRules");
+
 }
 
 function collectFruit(player, fruit)
