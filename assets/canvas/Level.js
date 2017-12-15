@@ -31,7 +31,8 @@ Level.prototype.init = function () {
 Level.prototype.preload = function () {
 	
 	this.load.pack('level', 'assets/pack.json');
-	
+  this.load.image('gameover', 'assets/images/GameOver.png');
+  this.load.image('congrats', 'assets/images/congrats.png');
 };
 
 Level.prototype.create = function () {
@@ -480,8 +481,16 @@ Level.prototype.create = function () {
 	_collisionLayer.setAll("renderable", false);
 	_collisionLayer.setAll("body.checkCollision.down", false);
 	_products.setAll("body.allowGravity", false);
-	
-	
+
+  congrats = this.add.button(0,0, "congrats", this.nextLevel,this);
+  congrats.fixedToCamera = true;
+  congrats.cameraOffset.setTo(300,150);
+  congrats.visible = false;
+
+  gameover = this.add.button(0,0, "gameover", this.gameOver, this);
+  gameover.fixedToCamera = true;
+  gameover.cameraOffset.setTo(300,150);
+  gameover.visible = false;
 	// public fields
 	
 	this.fBG = _BG;
@@ -497,7 +506,8 @@ Level.prototype.create = function () {
 };
 
 /* --- end generated code --- */
-var groupSalesVolume = 0, personalSalesVolume = 0, percentDone, progress, numberDistributors = 0, congrats;
+var groupSalesVolume = 0, personalSalesVolume = 0, percentDone, progress, numberDistributors = 0, congrats, distributorCount = 0,
+		gsvAmount, angle = {min: 0, max: 0}, radialProgressBar, color1=0xff0000, color2=0x80ff00;
 
 Level.prototype.beforeCreate = function() {
 	
@@ -559,88 +569,104 @@ Level.prototype.afterCreate = function () {
         x: this.game.world.centerX/2,
         y: (this.game.world.centerY/2) + 120,
         seconds: 45,
-        onComplete: function() {}
+        onComplete: function() {
+          gameover.visible = true;
+				}
     });
     indicator.start();
-
-
 
 };
 
 Level.prototype.update = function() {
-    this.physics.arcade.collide(this.fPlayer, this.fCollisionLayer);
-    this.physics.arcade.collide(this.fDownline, this.fCollisionLayer);
+  this.physics.arcade.collide(this.fPlayer, this.fCollisionLayer);
+  this.physics.arcade.collide(this.fDownline, this.fCollisionLayer);
 
-	if (this.cursors.left.isDown) {
-        // move to the left
-        this.fPlayer.body.velocity.x = -200;
-    } else if (this.cursors.right.isDown) {
-        // move to the right
-        this.fPlayer.body.velocity.x = 200;
+  if (this.cursors.left.isDown) {
+    // move to the left
+    this.fPlayer.body.velocity.x = -200;
+  } else if (this.cursors.right.isDown) {
+    // move to the right
+    this.fPlayer.body.velocity.x = 200;
+  } else {
+    // dont move in the horizontal
+    this.fPlayer.body.velocity.x = 0;
+  }
+
+  // a flag to know if the player is (down) touching the platforms
+  var touching = this.fPlayer.body.touching.down;
+
+  if (touching && this.cursors.up.isDown) {
+    // jump if the player is on top of a platform and the up key is pressed
+    this.fPlayer.body.velocity.y = -600;
+  }
+
+  if (touching) {
+    if (this.fPlayer.body.velocity.x == 0) {
+      // if it is not moving horizontally play the idle
+      this.fPlayer.play("idle");
     } else {
-        // dont move in the horizontal
-        this.fPlayer.body.velocity.x = 0;
+      // if it is moving play the walk
+      this.fPlayer.play("walk");
     }
+  } else {
+    // it is not touching the platforms so it means it is jumping.
+    this.fPlayer.play("jump");
+  }
 
-    // a flag to know if the player is (down) touching the platforms
-    var touching = this.fPlayer.body.touching.down;
+  // update the facing of the player
+  if (this.cursors.left.isDown) {
+    // face left
+    this.fPlayer.scale.x = -1;
+  } else if (this.cursors.right.isDown) {
+    // face right
+    this.fPlayer.scale.x = 1;
+  }
 
-    if (touching && this.cursors.up.isDown) {
-        // jump if the player is on top of a platform and the up key is pressed
-        this.fPlayer.body.velocity.y = -600;
-    }
+  // fruits
+  this.physics.arcade.overlap(this.fPlayer, this.fFruits, this.playerVsFruit, null, this);
+  this.physics.arcade.overlap(this.fPlayer, this.fProducts, this.playerVsProduct, null, this);
 
-    if (touching) {
-        if (this.fPlayer.body.velocity.x == 0) {
-            // if it is not moving horizontally play the idle
-            this.fPlayer.play("idle");
-        } else {
-            // if it is moving play the walk
-            this.fPlayer.play("walk");
-        }
-    } else {
-        // it is not touching the platforms so it means it is jumping.
-        this.fPlayer.play("jump");
-    }
+  // downline
+  this.physics.arcade.overlap(this.fPlayer, this.fDownline, this.playerVsDownline, null, this);
+  // water
+  this.fWater.tilePosition.x -= 1;
+  this.fBG.tilePosition.x = -this.camera.x;
 
-    // update the facing of the player
-    if (this.cursors.left.isDown) {
-        // face left
-        this.fPlayer.scale.x = -1;
-    } else if (this.cursors.right.isDown) {
-        // face right
-        this.fPlayer.scale.x = 1;
-    }
+  // progress bar
+  progress.width += .1;
+  numberDistributors = 1;
 
-    // fruits
-    this.physics.arcade.overlap(this.fPlayer, this.fFruits, this.playerVsFruit, null, this);
-    this.physics.arcade.overlap(this.fPlayer, this.fProducts, this.playerVsProduct, null, this);
+  if (this.gsvAmount >= 100 && distributorCount >= 1) {
+    congrats.visible = true;
+  }
 
-    // downline
-    this.physics.arcade.overlap(this.fPlayer, this.fDownline, this.playerVsDownline, null, this);
-    // water
-    this.fWater.tilePosition.x -= 1;
-    this.fBG.tilePosition.x = -this.camera.x;
-
-    // progress bar
-    progress.width += .1;
-    numberDistributors = 1;
-
-
-    //While there is score in the score buffer, add it to the actual score
-    if(this.scoreBuffer > 0){
-        this.incrementScore("psv",this.scoreBuffer);
-        this.scoreBuffer = 0;
-    }
+  //While there is score in the score buffer, add it to the actual score
+  if (this.scoreBuffer > 0) {
+    this.incrementScore("psv", this.scoreBuffer);
+    this.scoreBuffer = 0;
+  }
+  if (this.dist_player.visible)
+	{
+    radialProgressBar.clear();
+    radialProgressBar.lineStyle(8, 0xff0000, 1);
+    radialProgressBar.lineColor = Phaser.Color.interpolateColor(color1, color2, 360, angle.max, 1);
+    radialProgressBar.arc(0,0,26, angle.min, this.game.math.degToRad(angle.max), false);
+    radialProgressBar.endFill();
+	}
 };
 
 Level.prototype.createBadges = function(){
     this.main_player = this.game.add.sprite(10, 10, "main-marker", 1);
     this.main_player.fixedToCamera = true;
-    this.dist_player = this.game.add.sprite(30, 100, "dist-marker", 1);
+    this.dist_player = this.game.add.sprite(1140, 10, "dist-marker", 1);
     this.dist_player.scale.setTo(0.5, 0.5);
     this.dist_player.fixedToCamera = true;
     this.dist_player.visible = false;
+
+  this.dist_player2 = this.game.add.sprite(30, 100, "dist-marker", 1);
+  this.dist_player2.scale.setTo(0.5, 0.5);
+  this.dist_player2.fixedToCamera = true;
+  this.dist_player2.visible = false;
 
 }
 
@@ -668,6 +694,7 @@ Level.prototype.createScoreAnimation = function (x, y, message, score){
 
 Level.prototype.incrementScore = function(type, amount){
 
+	this.gsvAmount += amount;
 	if(type === "psv"){
         this.psvAmount += amount;
         this.psvLabel.text = "Personal Sales Volume: " + this.psvAmount;
@@ -675,17 +702,17 @@ Level.prototype.incrementScore = function(type, amount){
         this.gsvAmount += amount;
         this.gsvLabel.text = "Group Sales Volume: " + this.gsvAmount;
 	}
-
 }
 
 Level.prototype.playerVsDownline = function(player, customer) {
     customer.body.enable = false;
+    distributorCount++;
     this.createScoreAnimation(customer.x, customer.y, '+'+10, 10);
     console.log("got vs customer");
 
     this.add.tween(customer).to({
         y : 10,
-		x: 10
+		x: 1140
     }, 3000, "Expo.easeOut", true);
 
     this.add.tween(customer.scale).to({
@@ -698,6 +725,19 @@ Level.prototype.playerVsDownline = function(player, customer) {
     }, 1000, "Linear", true).onComplete.add(customer.kill, customer);
 
     this.dist_player.visible = true;
+
+  radialProgressBar = this.game.add.graphics(this.game.world.centerX, this.game.world.centerY);
+  radialProgressBar.lineStyle(8, 0xff0000, 1);
+  radialProgressBar.fixedToCamera = true;
+  radialProgressBar.cameraOffset.setTo(1165,35);
+
+  angle = {min: 0, max: 0}
+  tween = this.game.add.tween(angle).to( {max:360}, 5000, "Linear", true, 0, 0, false);
+  tween.onComplete.add(function() {
+    this.dist_player.visible = false;
+    this.dist_player2.visible = true;
+    radialProgressBar.kill();
+  }, this);
 
 };
 
@@ -801,4 +841,14 @@ Level.prototype.createScore = function(){
     //Create a tween to grow / shrink the score label
     this.gsvLabelTween = this.add.tween(this.psvLabel.scale).to({ x: 1.5, y: 1.5}, 200, Phaser.Easing.Linear.In).to({ x: 1, y: 1}, 200, Phaser.Easing.Linear.In);
 
+};
+
+Level.prototype.gameOver = function()
+{
+  this.game.state.start("Level");
 }
+Level.prototype.nextLevel = function()
+{
+  congrats.visible = false;
+  this.game.state.start("QualifyingRules");
+};
