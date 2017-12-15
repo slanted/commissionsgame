@@ -636,7 +636,7 @@ Level.prototype.update = function() {
   progress.width += .1;
   numberDistributors = 1;
 
-  if (this.gsvAmount >= 100 && distributorCount >= 1) {
+  if (this.gsvAmount >= 2000 && distributorCount >= 1) {
     congrats.visible = true;
   }
 

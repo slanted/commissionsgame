@@ -7,6 +7,7 @@
     <list default="true" id="fdd96b4f-9ecb-4336-8fc4-550add7ae5f7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/assets/canvas/Level.js" afterPath="$PROJECT_DIR$/assets/canvas/Level.js" />
       <change beforePath="$PROJECT_DIR$/assets/canvas/Level2.js" afterPath="$PROJECT_DIR$/assets/canvas/Level2.js" />
+      <change beforePath="$PROJECT_DIR$/js/Main.js" afterPath="$PROJECT_DIR$/js/Main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +22,28 @@
       <file leaf-file-name="Level2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/canvas/Level2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="554" column="26" lean-forward="false" selection-start-line="554" selection-start-column="26" selection-end-line="554" selection-end-column="26" />
+            <state relative-caret-position="551">
+              <caret line="745" column="0" lean-forward="true" selection-start-line="745" selection-start-column="0" selection-end-line="745" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phaser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/phaser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="52923" column="0" lean-forward="false" selection-start-line="52923" selection-start-column="0" selection-end-line="52923" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,8 +52,8 @@
       <file leaf-file-name="Level.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/canvas/Level.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="741" column="23" lean-forward="false" selection-start-line="741" selection-start-column="23" selection-end-line="741" selection-end-column="23" />
+            <state relative-caret-position="217">
+              <caret line="636" column="25" lean-forward="true" selection-start-line="636" selection-start-column="25" selection-end-line="636" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -45,15 +66,31 @@
       <find>timer</find>
       <find>time</find>
       <find>distributor</find>
-      <find>gsvAmount</find>
       <find>radialProgressBar</find>
       <find>dist_player</find>
       <find>this.psvAmount</find>
       <find>Level</find>
       <find>distributorCount</find>
+      <find>gsvAmount</find>
+      <find>angle</find>
+      <find>buildingAngle.max</find>
+      <find>buildingAngle</find>
+      <find>this.buildingAngleBar</find>
+      <find>sharing</find>
+      <find>buildingAngleBar</find>
+      <find>sharingAngleBar</find>
+      <find>personalSalesVolume</find>
+      <find>psvLabel</find>
+      <find>buildingText</find>
+      <find>scoreFont</find>
+      <find>toothpas</find>
+      <find>var blockContainers;</find>
+      <find>text</find>
+      <find>congrats</find>
     </findStrings>
     <replaceStrings>
       <replace>Level2</replace>
+      <replace>building</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -62,6 +99,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/js/Main.js" />
         <option value="$PROJECT_DIR$/assets/canvas/Level2.js" />
         <option value="$PROJECT_DIR$/assets/canvas/Level.js" />
       </list>
@@ -80,10 +118,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
-    <option name="y" value="42" />
+    <option name="x" value="76" />
+    <option name="y" value="153" />
     <option name="width" value="1546" />
-    <option name="height" value="830" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -233,7 +271,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="42" width="1546" height="830" extended-state="0" />
+    <frame x="76" y="153" width="1546" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -271,18 +309,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/phaser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="52923" column="0" lean-forward="false" selection-start-line="52923" selection-start-column="0" selection-end-line="52923" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/canvas/Level2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="554" column="26" lean-forward="false" selection-start-line="554" selection-start-column="26" selection-end-line="554" selection-end-column="26" />
+        <state relative-caret-position="551">
+          <caret line="745" column="0" lean-forward="true" selection-start-line="745" selection-start-column="0" selection-end-line="745" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/canvas/Level.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="741" column="23" lean-forward="false" selection-start-line="741" selection-start-column="23" selection-end-line="741" selection-end-column="23" />
+        <state relative-caret-position="217">
+          <caret line="636" column="25" lean-forward="true" selection-start-line="636" selection-start-column="25" selection-end-line="636" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -507,7 +507,8 @@ Level2.prototype.create = function () {
 
 /* --- end generated code --- */
 var groupSalesVolume = 0, personalSalesVolume = 0, percentDone, progress, numberDistributors = 0, congrats, distributorCount = 0,
-    gsvAmount, angle = {min: 0, max: 0}, radialProgressBar, color1=0xff0000, color2=0x80ff00;
+    gsvAmount, angle = {min: 0, max: 0}, radialProgressBar, color1=0xff0000, color2=0x80ff00, buildingAngle = {min: 0, max: 0}, sharingAngle = {min: 0, max: 0},
+		buildingColor = 0x00ff00, sharingColor = 0x0000ff, buildingAngleBar, sharingAngleBar, graphics, buildingText;
 
 Level2.prototype.beforeCreate = function() {
 
@@ -552,9 +553,11 @@ Level2.prototype.beforeCreate = function() {
   this.score = 0;
   this.scoreBuffer = 0;
 
+  sharingTween = this.game.add.tween(sharingAngle).to( {max:360}, 5000, "Linear", true, 0, 0, false);
+  sharingTween.onComplete.add(function() {
+  }, this);
   //Create the score label
 };
-
 
 Level2.prototype.afterCreate = function () {
   this.createScore();
@@ -571,7 +574,6 @@ Level2.prototype.afterCreate = function () {
     }
   });
   indicator.start();
-
 };
 
 Level2.prototype.update = function() {
@@ -633,7 +635,7 @@ Level2.prototype.update = function() {
   progress.width += .1;
   numberDistributors = 1;
 
-  if (this.gsvAmount >= 100 && distributorCount >= 1) {
+  if (this.gsvAmount >= 2000 && distributorCount >= 1) {
     congrats.visible = true;
   }
 
@@ -669,7 +671,6 @@ Level2.prototype.createBadges = function(){
 
 Level2.prototype.createScoreAnimation = function (x, y, message, score){
 
-
   var scoreFont = "24px Arial";
 
   //Create a new label for the score
@@ -689,12 +690,60 @@ Level2.prototype.createScoreAnimation = function (x, y, message, score){
   }, this);
 };
 
-Level2.prototype.incrementScore = function(type, amount){
+Level2.prototype.incrementScore = function(type, amount) {
 
   this.gsvAmount += amount;
   this.psvAmount += amount;
   this.psvLabel.text = "Personal Sales Volume: " + this.psvAmount;
   this.gsvLabel.text = "Group Sales Volume: " + this.gsvAmount;
+
+  var percentage = this.gsvAmount / 500;
+  var amountToIncrease = 360 * percentage;
+  var amountToIncreaseSharing = amountToIncrease / 3;
+
+  if (!buildingAngleBar)
+	{
+    buildingAngleBar = this.game.add.graphics(this.game.world.centerX, this.game.world.centerY);
+		buildingAngleBar.lineStyle(12, 0x0000ff, 1);
+		buildingAngleBar.fixedToCamera = true;
+		buildingAngleBar.cameraOffset.setTo(1165, 100);
+
+    buildingTween = this.game.add.tween(angle).to( {max:360}, 5000, "Linear", true, 0, 0, false);
+	}
+
+  buildingAngleBar.clear();
+  buildingAngleBar.lineStyle(12, 0x0000ff, 1);
+  buildingAngleBar.arc(0,0,20, 0, this.game.math.degToRad(amountToIncrease), false);
+  buildingAngleBar.endFill();
+
+  if (!sharingAngleBar)
+  {
+    sharingAngleBar = this.game.add.graphics(this.game.world.centerX, this.game.world.centerY);
+    sharingAngleBar.lineStyle(12, 0xff0000, 1);
+    sharingAngleBar.fixedToCamera = true;
+    sharingAngleBar.cameraOffset.setTo(1165, 200);
+
+    sharingTween = this.game.add.tween(angle).to( {max:360}, 5000, "Linear", true, 0, 0, false);
+
+  }
+
+  sharingAngleBar.clear();
+  sharingAngleBar.lineStyle(12, 0xff0000, 1);
+  sharingAngleBar.arc(0,0,20, 0, this.game.math.degToRad(amountToIncreaseSharing), false);
+  sharingAngleBar.endFill();
+
+  if (!buildingText)
+	{
+    buildingText = this.game.add.text(0,0, "Building", {font: '14px Arial', fill: "#ffffff", stroke: "#535353", strokeThickness: 3});
+    buildingText.fixedToCamera = true;
+    buildingText.cameraOffset.setTo(1140, 140);
+
+    sharingText = this.game.add.text(0,0, "Sharing", {font: '14px Arial', fill: "#ffffff", stroke: "#535353", strokeThickness: 3});
+    sharingText.fixedToCamera = true;
+    sharingText.cameraOffset.setTo(1140, 242);
+	}
+
+
   /*if(type === "psv"){
         this.psvAmount += amount;
         this.psvLabel.text = "Personal Sales Volume: " + this.psvAmount;

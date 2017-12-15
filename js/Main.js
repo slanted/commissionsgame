@@ -6,9 +6,9 @@ window.onload = function() {
 	//some global variables
     game.global = {
         earnings : 0,
-		productToothpaste : 10,
-		productLumi : 100,
-		productVitamins : 15,
+		productToothpaste : 100,
+		productLumi : 1000,
+		productVitamins : 150,
 
     }
 
