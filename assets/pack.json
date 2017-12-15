@@ -3,9 +3,29 @@
     {
       "type": "spritesheet",
       "key": "player",
-      "url": "assets/images/fufu.png",
-      "frameWidth": 210,
-      "frameHeight": 210,
+      "url": "assets/images/blue_0000_3x6.png",
+      "frameWidth": 130,
+      "frameHeight": 198,
+      "frameMax": -1,
+      "margin": 5,
+      "spacing": 5
+    },
+    {
+      "type": "spritesheet",
+      "key": "downline",
+      "url": "assets/images/bubble_2x5.png",
+      "frameWidth": 160,
+      "frameHeight": 158,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "timer",
+      "url": "assets/images/timer.png",
+      "frameWidth": 300,
+      "frameHeight": 30,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
@@ -17,10 +37,30 @@
       "overwrite": false
     },
     {
+      "type": "image",
+      "key": "main-marker",
+      "url": "assets/images/main-player-marker.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "dist-marker",
+      "url": "assets/images/distributor-marker.png",
+      "overwrite": false
+    },
+
+    {
       "type": "atlas",
       "key": "objects",
       "textureURL": "assets/textures/objects.png",
       "atlasURL": "assets/textures/objects.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "products",
+      "textureURL": "assets/textures/products.png",
+      "atlasURL": "assets/textures/products.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
     },
     {
@@ -32,7 +72,7 @@
     }
   ],
   "meta": {
-    "generated": "1511202790727",
+    "generated": "1513305829887",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

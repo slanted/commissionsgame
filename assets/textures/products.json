@@ -1,0 +1,69 @@
+{
+  "frames": {
+    "products_01": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 129,
+        "y": 2,
+        "w": 97,
+        "h": 252
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 97,
+        "h": 252
+      },
+      "sourceSize": {
+        "w": 97,
+        "h": 252
+      }
+    },
+    "products_02": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 228,
+        "y": 6,
+        "w": 96,
+        "h": 248
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 248
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 248
+      }
+    },
+    "products_03": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 26,
+        "w": 125,
+        "h": 228
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 125,
+        "h": 228
+      },
+      "sourceSize": {
+        "w": 125,
+        "h": 228
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "products.png"
+  }
+}

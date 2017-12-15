@@ -384,6 +384,8 @@ Level2.prototype.beforeCreate = function() {
 
 	// create the cursors
 	this.cursors = this.input.keyboard.createCursorKeys();
+
+
 };
 
 Level2.prototype.afterCreate = function () {
