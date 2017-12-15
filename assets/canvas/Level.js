@@ -695,18 +695,21 @@ Level.prototype.createScoreAnimation = function (x, y, message, score){
 Level.prototype.incrementScore = function(type, amount){
 
 	this.gsvAmount += amount;
-	if(type === "psv"){
+  this.psvAmount += amount;
+  this.psvLabel.text = "Personal Sales Volume: " + this.psvAmount;
+  this.gsvLabel.text = "Group Sales Volume: " + this.gsvAmount;
+	/*if(type === "psv"){
         this.psvAmount += amount;
         this.psvLabel.text = "Personal Sales Volume: " + this.psvAmount;
 	}else{
         this.gsvAmount += amount;
         this.gsvLabel.text = "Group Sales Volume: " + this.gsvAmount;
 	}
+	*/
 }
 
 Level.prototype.playerVsDownline = function(player, customer) {
     customer.body.enable = false;
-    distributorCount++;
     this.createScoreAnimation(customer.x, customer.y, '+'+10, 10);
     console.log("got vs customer");
 
@@ -736,6 +739,7 @@ Level.prototype.playerVsDownline = function(player, customer) {
   tween.onComplete.add(function() {
     this.dist_player.visible = false;
     this.dist_player2.visible = true;
+    distributorCount++;
     radialProgressBar.kill();
   }, this);
 

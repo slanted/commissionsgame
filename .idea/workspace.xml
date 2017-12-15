@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/assets/canvas/Level.js" line="707" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd96b4f-9ecb-4336-8fc4-550add7ae5f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/canvas/Level.js" afterPath="$PROJECT_DIR$/assets/canvas/Level.js" />
+      <change beforePath="$PROJECT_DIR$/assets/canvas/Level2.js" afterPath="$PROJECT_DIR$/assets/canvas/Level2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="Level2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/canvas/Level2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="554" column="26" lean-forward="false" selection-start-line="554" selection-start-column="26" selection-end-line="554" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -31,8 +31,8 @@
       <file leaf-file-name="Level.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/canvas/Level.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="737" column="37" lean-forward="false" selection-start-line="737" selection-start-column="37" selection-end-line="737" selection-end-column="37" />
+            <state relative-caret-position="391">
+              <caret line="741" column="23" lean-forward="false" selection-start-line="741" selection-start-column="23" selection-end-line="741" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -45,11 +45,16 @@
       <find>timer</find>
       <find>time</find>
       <find>distributor</find>
-      <find>distributorCount</find>
       <find>gsvAmount</find>
       <find>radialProgressBar</find>
       <find>dist_player</find>
+      <find>this.psvAmount</find>
+      <find>Level</find>
+      <find>distributorCount</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Level2</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,6 +62,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/assets/canvas/Level2.js" />
         <option value="$PROJECT_DIR$/assets/canvas/Level.js" />
       </list>
     </option>
@@ -74,8 +80,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="186" />
+    <option name="x" value="109" />
+    <option name="y" value="42" />
     <option name="width" value="1546" />
     <option name="height" value="830" />
   </component>
@@ -227,7 +233,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="186" width="1546" height="830" extended-state="0" />
+    <frame x="109" y="42" width="1546" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -267,16 +273,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/canvas/Level2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="554" column="26" lean-forward="false" selection-start-line="554" selection-start-column="26" selection-end-line="554" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/canvas/Level.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="737" column="37" lean-forward="false" selection-start-line="737" selection-start-column="37" selection-end-line="737" selection-end-column="37" />
+        <state relative-caret-position="391">
+          <caret line="741" column="23" lean-forward="false" selection-start-line="741" selection-start-column="23" selection-end-line="741" selection-end-column="23" />
           <folding />
         </state>
       </provider>
