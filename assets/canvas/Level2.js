@@ -7,12 +7,12 @@
 
 
 /**
- * Level.
+ * Level2.
  */
 function Level2() {
-
-  Phaser.State.call(this);
-
+	
+	Phaser.State.call(this);
+	
 }
 
 /** @type Phaser.State */
@@ -21,488 +21,238 @@ Level2.prototype = Level2_proto;
 Level2.prototype.constructor = Level2;
 
 Level2.prototype.init = function () {
-
-  this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-  this.scale.pageAlignHorizontally = true;
-  this.scale.pageAlignVertically = true;
-
+	
+	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	this.scale.pageAlignHorizontally = true;
+	this.scale.pageAlignVertically = true;
+	
 };
 
 Level2.prototype.preload = function () {
-
-  this.load.pack('level', 'assets/pack.json');
-  this.load.image('gameover', 'assets/images/GameOver.png');
-  this.load.image('congrats', 'assets/images/congrats.png');
+	
+	this.load.pack('level', 'assets/pack.json');
+	
 };
 
 Level2.prototype.create = function () {
-
-  this.beforeCreate();
-
-  var _BG = this.add.tileSprite(-11, -7, 1713, 750, 'BG', null);
-  _BG.scale.setTo(1.1289946683730876, 1.0275188997398834);
-  _BG.fixedToCamera = true;
-
-  var _back = this.add.group();
-
-  var _Bush__2_ = this.add.tileSprite(103, 1459, 133, 65, 'objects', 'Bush (2)', _back);
-  _Bush__2_.scale.setTo(1.2436090513997489, 1.4061541519275604);
-
-  this.add.sprite(1021, 492, 'objects', 'Crate', _back);
-
-  this.add.sprite(1074, 1143, 'tiles', '1', _back);
-
-  this.add.tileSprite(1202, 1143, 512, 128, 'tiles', '2', _back);
-
-  this.add.sprite(1714, 1143, 'tiles', '3', _back);
-
-  this.add.sprite(1714, 1527, 'tiles', '16', _back);
-
-  this.add.sprite(1074, 1527, 'tiles', '12', _back);
-
-  this.add.tileSprite(1202, 1527, 512, 128, 'tiles', '9', _back);
-
-  this.add.tileSprite(1074, 1271, 129, 256, 'tiles', '4', _back);
-
-  this.add.tileSprite(1714, 1271, 128, 256, 'tiles', '6', _back);
-
-  this.add.tileSprite(1202, 1271, 512, 256, 'tiles', '5', _back);
-
-  this.add.sprite(-11, 1529, 'tiles', '1', _back);
-
-  this.add.tileSprite(117, 1529, 512, 128, 'tiles', '2', _back);
-
-  this.add.sprite(629, 1529, 'tiles', '3', _back);
-
-  this.add.sprite(629, 1657, 'tiles', '16', _back);
-
-  this.add.sprite(-11, 1657, 'tiles', '12', _back);
-
-  this.add.tileSprite(117, 1657, 512, 128, 'tiles', '9', _back);
-
-  this.add.sprite(1013, 1323, 'tiles', '1', _back);
-
-  this.add.tileSprite(1141, 1323, 512, 128, 'tiles', '2', _back);
-
-  this.add.sprite(1653, 1323, 'tiles', '3', _back);
-
-  this.add.sprite(2037, 1657, 'tiles', '16', _back);
-
-  this.add.sprite(1013, 1657, 'tiles', '12', _back);
-
-  this.add.tileSprite(1141, 1657, 896, 128, 'tiles', '9', _back);
-
-  this.add.tileSprite(1141, 1401, 512, 256, 'tiles', '5', _back);
-
-  this.add.tileSprite(1653, 1401, 128, 128, 'tiles', '6', _back);
-
-  this.add.tileSprite(1013, 1401, 129, 256, 'tiles', '4', _back);
-
-  this.add.sprite(1781, 1529, 'tiles', '11', _back);
-
-  this.add.sprite(1653, 1529, 'tiles', '10', _back);
-
-  this.add.sprite(2037, 1529, 'tiles', '3', _back);
-
-  this.add.sprite(1909, 1529, 'tiles', '2', _back);
-
-  this.add.sprite(-11, 505, 'tiles', '1', _back);
-
-  this.add.tileSprite(117, 505, 512, 128, 'tiles', '2', _back);
-
-  var _Bush__2_1 = this.add.sprite(34, 382, 'objects', 'Bush (2)', _back);
-  _Bush__2_1.scale.setTo(1.9849624160619828, 1.9384615456376617);
-
-  this.add.sprite(629, 505, 'tiles', '3', _back);
-
-  this.add.sprite(629, 633, 'tiles', '16', _back);
-
-  this.add.sprite(-11, 633, 'tiles', '12', _back);
-
-  this.add.tileSprite(117, 633, 512, 128, 'tiles', '9', _back);
-
-  this.add.sprite(1397, 377, 'tiles', '15', _back);
-
-  this.add.sprite(1269, 377, 'tiles', '13', _back);
-
-  this.add.sprite(1013, 761, 'tiles', '13', _back);
-
-  this.add.sprite(1141, 761, 'tiles', '14', _back);
-
-  this.add.sprite(1269, 761, 'tiles', '15', _back);
-
-  this.add.sprite(503, 1030, 'tiles', '13', _back);
-
-  this.add.sprite(631, 1030, 'tiles', '14', _back);
-
-  this.add.sprite(759, 1030, 'tiles', '15', _back);
-
-  this.add.sprite(729, 955, 'objects', 'Crate', _back);
-
-  this.add.sprite(652, 955, 'objects', 'Crate', _back);
-
-  this.add.sprite(575, 955, 'objects', 'Crate', _back);
-
-  this.add.sprite(652, 878, 'objects', 'Crate', _back);
-
-  this.add.sprite(1855, 1457, 'objects', 'Crate', _back);
-
-  this.add.sprite(-7, 446, 'objects', 'Bush (1)', _back);
-
-  this.add.sprite(1642, 1110, 'objects', 'Tree_1', _back);
-
-  this.add.tileSprite(-46, 1742, 2245, 201, 'tiles', '18', _back);
-
-  this.add.sprite(571, 456, 'objects', 'Stone', _back);
-
-  this.add.sprite(1115, 1263, 'objects', 'Bush (1)', _back);
-
-  this.add.sprite(1378, 1262, 'objects', 'Bush (2)', _back);
-
-  this.add.sprite(1511, 1077, 'objects', 'Crate', _back);
-
-  this.add.sprite(1471, 1001, 'objects', 'Crate', _back);
-
-  this.add.sprite(807, 1598, 'tiles', '13', _back);
-
-  this.add.sprite(934, 1597, 'tiles', '14', _back);
-
-  this.add.sprite(1061, 1597, 'tiles', '14', _back);
-
-  this.add.sprite(1188, 1597, 'tiles', '14', _back);
-
-  this.add.sprite(1315, 1596, 'tiles', '14', _back);
-
-  this.add.sprite(1442, 1595, 'tiles', '14', _back);
-
-  this.add.sprite(1569, 1595, 'tiles', '15', _back);
-
-  this.add.sprite(1976, 1292, 'tiles', '13', _back);
-
-  this.add.sprite(2257, 1497, 'tiles', '14', _back);
-
-  this.add.sprite(2103, 1292, 'tiles', '15', _back);
-
-  this.add.sprite(1931, 1457, 'objects', 'Crate', _back);
-
-  var _player = this.add.tileSprite(201, 1331, 126, 198, 'player', 0);
-  _player.pivot.setTo(1.9391937255859375, 0.0816650390625);
-  _player.anchor.setTo(0.5, 0.0);
-  var _player_walk = _player.animations.add('walk', [7, 8, 9, 10, 11, 12, 13, 14, 15], 6, true);
-  _player.animations.add('jump', [2, 3, 4, 5, 6, 7], 6, true);
-  _player.animations.add('idle', [0], 4, true);
-  this.game.physics.arcade.enable(_player);
-  _player.body.setSize(67.91329956054688, 90.52034759521484, 24.572677612304688, 108.1305923461914);
-
-  var _downline = this.add.sprite(884, 629, 'downline', 0);
-  _downline.scale.setTo(0.66, 0.66);
-  _downline.animations.add('walk', [6, 1, 4, 9, 1], 6, true);
-  this.game.physics.arcade.enable(_downline);
-  _downline.body.setSize(132.88282465934753, 126.9884102344513, 14.029208421707153, 14.647881269454956);
-  _downline.body.mass = 0.02;
-  _downline.body.bounce.x = 1.0;
-  _downline.body.bounce.y = 1.0;
-  _downline.body.velocity.x = 25.0;
-  _downline.body.velocity.y = 25.0;
-  _downline.body.acceleration.x = 5.0;
-  _downline.body.acceleration.y = 2.0;
-  _downline.body.gravity.x = 0.1;
-  _downline.body.gravity.y = 0.1;
-  _downline.body.angularVelocity = 1.0;
-
-  var _water = this.add.tileSprite(-51, 1644, 2241, 99, 'tiles', '17');
-
-  var _fruits = this.add.physicsGroup(Phaser.Physics.ARCADE);
-  _fruits.position.setTo(-11, -7);
-
-  this.add.sprite(639, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(564, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(489, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(414, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(339, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(264, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(189, 444, 'objects', 'fruit', _fruits);
-
-  this.add.sprite(114, 444, 'objects', 'fruit', _fruits);
-
-  var _front = this.add.group();
-  _front.position.setTo(-11, -7);
-
-  this.add.sprite(371, 465, 'objects', 'Bush (2)', _front);
-
-  this.add.sprite(178, 464, 'objects', 'Bush (1)', _front);
-
-  this.add.sprite(586, 997, 'objects', 'Stone', _front);
-
-  this.add.sprite(783, 1007, 'objects', 'Bush (3)', _front);
-
-  this.add.sprite(2051, 1497, 'objects', 'Stone', _front);
-
-  this.add.sprite(2063, 1442, 'objects', 'Sign_1', _front);
-
-  this.add.sprite(1206, 717, 'objects', 'Bush (1)', _front);
-
-  this.add.sprite(1293, 351, 'objects', 'Bush (3)', _front);
-
-  this.add.sprite(36, 1490, 'objects', 'Bush (1)', _front);
-
-  this.add.sprite(292, 1506, 'objects', 'Tree_1', _front);
-
-  this.add.sprite(594, 1486, 'objects', 'Sign_2', _front);
-
-  var _collisionLayer = this.add.physicsGroup(Phaser.Physics.ARCADE);
-  _collisionLayer.position.setTo(-11, -7);
-
-  this.add.tileSprite(3, 1543, 760, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1028, 1349, 760, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(516, 1047, 382, 17, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(4, 522, 760, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1027, 775, 378, 26, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1285, 391, 248, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1085, 1160, 766, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1793, 1546, 378, 38, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(587, 963, 229, 15, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(664, 886, 74, 15, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1524, 1087, 73, 25, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(1484, 1010, 73, 25, 'tiles', 'physics', _collisionLayer);
-
-  var _physics3 = this.add.tileSprite(1868, 1469, 73, 25, 'tiles', 'physics', _collisionLayer);
-  _physics3.scale.setTo(2.038874439941794, 1.0);
-
-  this.add.tileSprite(1033, 502, 74, 15, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(-12, 1740, 2201, 25, 'tiles', 'physics', _collisionLayer);
-
-  this.add.tileSprite(882, 1614, 760, 38, 'tiles', 'physics', _collisionLayer);
-
-  var _physics16 = this.add.tileSprite(1987, 1314, 73, 25, 'tiles', 'physics', _collisionLayer);
-  _physics16.scale.setTo(3.424018193616464, 1.0);
-
-  var _products = this.add.physicsGroup(Phaser.Physics.ARCADE);
-
-  var _products_2 = this.add.sprite(662, 382, 'products', 'products_01', _products);
-  _products_2.scale.setTo(0.5, 0.5);
-  _products_2.data = {
-    "type":"lumi"
-  };
-
-  var _products_1 = this.add.sprite(1223, 1023, 'products', 'products_01', _products);
-  _products_1.scale.setTo(0.5, 0.5);
-  _products_1.data = {
-    "type":"lumi"
-  };
-
-  var _products_4 = this.add.sprite(1022, 367, 'products', 'products_02', _products);
-  _products_4.scale.setTo(0.5, 0.5);
-  _products_4.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_5 = this.add.sprite(1018, 647, 'products', 'products_03', _products);
-  _products_5.scale.setTo(0.5, 0.5);
-  _products_5.data = {
-    "type":"vitamins"
-  };
-
-  var _products_ = this.add.sprite(690, 1461, 'products', 'products_01', _products);
-  _products_.scale.setTo(0.5, 0.5);
-  _products_.pivot.setTo(48.384033203125, 120.9599609375);
-  _products_.data = {
-    "type":"lumi"
-  };
-
-  var _products_7 = this.add.sprite(1173, 1488, 'products', 'products_02', _products);
-  _products_7.scale.setTo(0.5, 0.5);
-  _products_7.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_7.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_21 = this.add.sprite(1285, 258, 'products', 'products_02', _products);
-  _products_21.scale.setTo(0.5, 0.5);
-  _products_21.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_22 = this.add.sprite(1348, 260, 'products', 'products_02', _products);
-  _products_22.scale.setTo(0.5, 0.5);
-  _products_22.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_23 = this.add.sprite(1112, 639, 'products', 'products_02', _products);
-  _products_23.scale.setTo(0.5, 0.5);
-  _products_23.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_24 = this.add.sprite(1169, 642, 'products', 'products_02', _products);
-  _products_24.scale.setTo(0.5, 0.5);
-  _products_24.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_25 = this.add.sprite(1113, 1030, 'products', 'products_03', _products);
-  _products_25.scale.setTo(0.5, 0.5);
-  _products_25.data = {
-    "type":"vitamins"
-  };
-
-  var _products_8 = this.add.sprite(1237, 1488, 'products', 'products_02', _products);
-  _products_8.scale.setTo(0.5, 0.5);
-  _products_8.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_8.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_9 = this.add.sprite(1306, 1488, 'products', 'products_02', _products);
-  _products_9.scale.setTo(0.5, 0.5);
-  _products_9.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_9.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_10 = this.add.sprite(1380, 1487, 'products', 'products_02', _products);
-  _products_10.scale.setTo(0.5, 0.5);
-  _products_10.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_10.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_11 = this.add.sprite(1456, 1485, 'products', 'products_02', _products);
-  _products_11.scale.setTo(0.5, 0.5);
-  _products_11.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_11.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_12 = this.add.sprite(1530, 1486, 'products', 'products_02', _products);
-  _products_12.scale.setTo(0.5, 0.5);
-  _products_12.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_12.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_13 = this.add.sprite(1604, 1485, 'products', 'products_02', _products);
-  _products_13.scale.setTo(0.5, 0.5);
-  _products_13.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_13.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_3 = this.add.sprite(1901, 1385, 'products', 'products_02', _products);
-  _products_3.scale.setTo(0.5, 0.5);
-  _products_3.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_3.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_6 = this.add.sprite(1978, 1381, 'products', 'products_02', _products);
-  _products_6.angle = -17.44260402724665;
-  _products_6.scale.setTo(0.5, 0.5);
-  _products_6.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_6.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_14 = this.add.sprite(2048, 1337, 'products', 'products_02', _products);
-  _products_14.angle = -40.83167699771728;
-  _products_14.scale.setTo(0.5, 0.5);
-  _products_14.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_14.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_15 = this.add.sprite(2074, 1233, 'products', 'products_02', _products);
-  _products_15.angle = -94.30413637247831;
-  _products_15.scale.setTo(0.5, 0.5);
-  _products_15.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_15.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_16 = this.add.sprite(2048, 1150, 'products', 'products_02', _products);
-  _products_16.angle = -112.16512484958407;
-  _products_16.scale.setTo(0.5, 0.5);
-  _products_16.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_16.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_17 = this.add.sprite(1969, 1076, 'products', 'products_02', _products);
-  _products_17.angle = -147.95327753828477;
-  _products_17.scale.setTo(0.5, 0.5);
-  _products_17.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_17.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_18 = this.add.sprite(385, 1285, 'products', 'products_02', _products);
-  _products_18.scale.setTo(0.5, 0.5);
-  _products_18.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_18.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_19 = this.add.sprite(456, 1284, 'products', 'products_02', _products);
-  _products_19.scale.setTo(0.5, 0.5);
-  _products_19.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_19.data = {
-    "type":"toothpaste"
-  };
-
-  var _products_20 = this.add.sprite(534, 1283, 'products', 'products_02', _products);
-  _products_20.scale.setTo(0.5, 0.5);
-  _products_20.pivot.setTo(44.927978515625, 114.048095703125);
-  _products_20.data = {
-    "type":"toothpaste"
-  };
-
-  _fruits.setAll("body.allowGravity", false);
-  _collisionLayer.setAll("body.immovable", true);
-  _collisionLayer.setAll("body.allowGravity", false);
-  _collisionLayer.setAll("renderable", false);
-  _collisionLayer.setAll("body.checkCollision.down", false);
-  _products.setAll("body.allowGravity", false);
-
-  congrats = this.add.button(0,0, "congrats", this.nextLevel,this);
-  congrats.fixedToCamera = true;
-  congrats.cameraOffset.setTo(300,150);
-  congrats.visible = false;
-
-  gameover = this.add.button(0,0, "gameover", this.gameOver, this);
-  gameover.fixedToCamera = true;
-  gameover.cameraOffset.setTo(300,150);
-  gameover.visible = false;
-  // public fields
-
-  this.fBG = _BG;
-  this.fPlayer = _player;
-  this.fPlayer_walk = _player_walk;
-  this.fDownline = _downline;
-  this.fWater = _water;
-  this.fFruits = _fruits;
-  this.fCollisionLayer = _collisionLayer;
-  this.fProducts = _products;
-  this.afterCreate();
-
+	
+	this.beforeCreate();
+	
+	var _BG = this.add.tileSprite(-11, -7, 1713, 750, 'BG', null);
+	_BG.scale.setTo(1.1289946683730876, 1.0275188997398834);
+	_BG.fixedToCamera = true;
+	
+	var _back = this.add.group();
+	
+	var _Bush__2_ = this.add.tileSprite(103, 1459, 133, 65, 'objects', 'Bush (2)', _back);
+	_Bush__2_.scale.setTo(1.2436090513997489, 1.4061541519275604);
+	
+	this.add.sprite(-11, 1529, 'tiles', '1', _back);
+	
+	this.add.tileSprite(117, 1529, 512, 128, 'tiles', '2', _back);
+	
+	this.add.sprite(629, 1657, 'tiles', '16', _back);
+	
+	this.add.sprite(-11, 1657, 'tiles', '12', _back);
+	
+	this.add.tileSprite(117, 1657, 512, 128, 'tiles', '9', _back);
+	
+	this.add.sprite(2037, 1657, 'tiles', '16', _back);
+	
+	this.add.sprite(1013, 1657, 'tiles', '12', _back);
+	
+	this.add.tileSprite(1141, 1657, 896, 128, 'tiles', '9', _back);
+	
+	this.add.tileSprite(-46, 1742, 2245, 201, 'tiles', '18', _back);
+	
+	var _Bush__2_1 = this.add.tileSprite(1375, 1462, 133, 65, 'objects', 'Bush (2)', _back);
+	_Bush__2_1.scale.setTo(1.2436090513997489, 1.4061541519275604);
+	
+	this.add.sprite(1508, 1493, 'objects', 'Bush (1)', _back);
+	
+	this.add.sprite(1111, 1532, 'tiles', '1', _back);
+	
+	this.add.tileSprite(1239, 1532, 512, 128, 'tiles', '2', _back);
+	
+	this.add.sprite(1266, 1450, 'objects', 'Crate', _back);
+	
+	this.add.sprite(1188, 1450, 'objects', 'Crate', _back);
+	
+	this.add.sprite(543, 1393, 'tiles', '13', _back);
+	
+	this.add.sprite(671, 1393, 'tiles', '14', _back);
+	
+	this.add.sprite(799, 1393, 'tiles', '14', _back);
+	
+	this.add.sprite(927, 1393, 'tiles', '14', _back);
+	
+	this.add.sprite(629, 1529, 'tiles', '3', _back);
+	
+	this.add.sprite(669, 1265, 'tiles', '1', _back);
+	
+	this.add.sprite(797, 1265, 'tiles', '2', _back);
+	
+	this.add.sprite(925, 1265, 'tiles', '3', _back);
+	
+	this.add.sprite(1055, 1393, 'tiles', '15', _back);
+	
+	this.add.sprite(1751, 1532, 'tiles', '3', _back);
+	
+	this.add.sprite(495, 1037, 'tiles', '13', _back);
+	
+	this.add.sprite(623, 1037, 'tiles', '14', _back);
+	
+	this.add.sprite(750, 1037, 'tiles', '15', _back);
+	
+	this.add.sprite(580, 961, 'objects', 'Crate', _back);
+	
+	this.add.sprite(657, 961, 'objects', 'Crate', _back);
+	
+	this.add.sprite(733, 961, 'objects', 'Crate', _back);
+	
+	this.add.sprite(1225, 1373, 'objects', 'Crate', _back);
+	
+	var _player = this.add.tileSprite(201, 1331, 126, 198, 'player', 0);
+	_player.pivot.setTo(1.9391937255859375, 0.0816650390625);
+	_player.anchor.setTo(0.5, 0.0);
+	var _player_walk = _player.animations.add('walk', [7, 8, 9, 10, 11, 12, 13, 14, 15], 6, true);
+	_player.animations.add('jump', [2, 3, 4, 5, 6, 7], 6, true);
+	_player.animations.add('idle', [0], 4, true);
+	this.game.physics.arcade.enable(_player);
+	_player.body.setSize(67.91329956054688, 90.52034759521484, 24.572677612304688, 108.1305923461914);
+	_player.body.collideWorldBounds = true;
+	
+	var _downline = this.add.sprite(927, 539, 'downline', 0);
+	_downline.scale.setTo(0.66, 0.66);
+	_downline.animations.add('walk', [6, 1, 4, 9, 1], 6, true);
+	this.game.physics.arcade.enable(_downline);
+	_downline.body.setSize(132.88282465934753, 126.9884102344513, 14.029208421707153, 14.647881269454956);
+	_downline.body.mass = 0.02;
+	_downline.body.collideWorldBounds = true;
+	_downline.body.bounce.x = 1.0;
+	_downline.body.bounce.y = 1.0;
+	_downline.body.velocity.x = 25.0;
+	_downline.body.velocity.y = 25.0;
+	_downline.body.acceleration.x = 5.0;
+	_downline.body.acceleration.y = 2.0;
+	_downline.body.gravity.x = 0.1;
+	_downline.body.gravity.y = 0.1;
+	_downline.body.angularVelocity = 1.0;
+	
+	var _water = this.add.tileSprite(-51, 1644, 2241, 99, 'tiles', '17');
+	_water.scale.setTo(1.0161180153885407, 1.0);
+	
+	var _fruits = this.add.physicsGroup(Phaser.Physics.ARCADE);
+	_fruits.position.setTo(-11, -7);
+	
+	var _front = this.add.group();
+	_front.position.setTo(-11, -7);
+	
+	this.add.sprite(36, 1490, 'objects', 'Bush (1)', _front);
+	
+	var _products = this.add.physicsGroup(Phaser.Physics.ARCADE);
+	
+	var _products_8 = this.add.sprite(640, 686, 'products', 'products_01', _products);
+	_products_8.data = {
+	"type":"lumi"
+	};
+	
+	var _products_7 = this.add.sprite(1084, 1256, 'products', 'products_02', _products);
+	_products_7.scale.setTo(0.5, 0.5);
+	_products_7.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_6 = this.add.sprite(952, 1122, 'products', 'products_02', _products);
+	_products_6.scale.setTo(0.5, 0.5);
+	_products_6.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_5 = this.add.sprite(880, 1124, 'products', 'products_02', _products);
+	_products_5.scale.setTo(0.5, 0.5);
+	_products_5.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_4 = this.add.sprite(815, 1125, 'products', 'products_02', _products);
+	_products_4.scale.setTo(0.5, 0.5);
+	_products_4.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_3 = this.add.sprite(751, 1125, 'products', 'products_02', _products);
+	_products_3.scale.setTo(0.5, 0.5);
+	_products_3.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_2 = this.add.sprite(691, 1125, 'products', 'products_02', _products);
+	_products_2.scale.setTo(0.5, 0.5);
+	_products_2.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_1 = this.add.sprite(442, 1393, 'products', 'products_02', _products);
+	_products_1.scale.setTo(0.5, 0.5);
+	_products_1.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_ = this.add.sprite(377, 1392, 'products', 'products_02', _products);
+	_products_.scale.setTo(0.5, 0.5);
+	_products_.data = {
+	"type":"toothpaste"
+	};
+	
+	var _products_9 = this.add.sprite(1694, 1275, 'products', 'products_01', _products);
+	_products_9.data = {
+	"type":"lumi"
+	};
+	
+	var _collisionLayer = this.add.physicsGroup(Phaser.Physics.ARCADE);
+	_collisionLayer.position.setTo(-13, 9);
+	
+	this.add.tileSprite(3, 1543, 760, 38, 'tiles', 'physics', _collisionLayer);
+	
+	this.add.tileSprite(511, 1043, 382, 17, 'tiles', 'physics', _collisionLayer);
+	
+	this.add.tileSprite(687, 1265, 378, 26, 'tiles', 'physics', _collisionLayer);
+	
+	this.add.tileSprite(594, 948, 229, 15, 'tiles', 'physics', _collisionLayer);
+	
+	this.add.tileSprite(1241, 1366, 73, 25, 'tiles', 'physics', _collisionLayer);
+	
+	var _physics = this.add.tileSprite(1202, 1448, 73, 25, 'tiles', 'physics', _collisionLayer);
+	_physics.scale.setTo(2.038874439941794, 1.0);
+	
+	this.add.tileSprite(-12, 1711, 2201, 25, 'tiles', 'physics', _collisionLayer);
+	
+	this.add.tileSprite(1130, 1537, 760, 38, 'tiles', 'physics', _collisionLayer);
+	
+	var _physics1 = this.add.sprite(547, 1400, 'tiles', 'physics', _collisionLayer);
+	_physics1.scale.setTo(25.186472515587052, 1.0);
+	
+	_fruits.setAll("body.allowGravity", false);
+	_products.setAll("body.allowGravity", false);
+	_collisionLayer.setAll("body.immovable", true);
+	_collisionLayer.setAll("body.allowGravity", false);
+	_collisionLayer.setAll("renderable", false);
+	_collisionLayer.setAll("body.checkCollision.down", false);
+	
+	
+	// public fields
+	
+	this.fBG = _BG;
+	this.fPlayer = _player;
+	this.fPlayer_walk = _player_walk;
+	this.fDownline = _downline;
+	this.fWater = _water;
+	this.fFruits = _fruits;
+	this.fProducts = _products;
+	this.fCollisionLayer = _collisionLayer;
+	this.afterCreate();
+	
 };
 
 /* --- end generated code --- */

@@ -1,0 +1,983 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "Level2",
+    "sceneWidth": 2200,
+    "sceneHeight": 1800,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "stepWidth": 128,
+    "stepHeight": 93,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true,
+    "create_before": "this.beforeCreate();",
+    "create_after": "this.afterCreate();"
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "8a0fc0bc-e3be-4656-9585-f855ac8ba0bb",
+    "info": {
+      "editorName": "Level",
+      "setAll": [],
+      "children": [
+        {
+          "type": "tileSprite",
+          "id": "f7db2af2-917c-4ccb-8308-d84ed9c92d40",
+          "asset": "0",
+          "info": {
+            "editorName": "BG",
+            "editorPublic": true,
+            "x": -11,
+            "y": -7,
+            "scale.x": 1.1289946683730876,
+            "scale.y": 1.0275188997398834,
+            "fixedToCamera": true,
+            "width": 1712.9580078125,
+            "height": 750
+          }
+        },
+        {
+          "type": "group",
+          "id": "97f94277-cf05-4176-a6ad-8d066254b045",
+          "info": {
+            "editorName": "back",
+            "setAll": [],
+            "children": [
+              {
+                "type": "tileSprite",
+                "id": "a2c0ae6c-05a6-413a-b4a5-cdf5429585f0",
+                "asset": "1",
+                "info": {
+                  "editorName": "Bush__2_",
+                  "x": 103,
+                  "y": 1459,
+                  "scale.x": 1.2436090513997489,
+                  "scale.y": 1.4061541519275604,
+                  "width": 133,
+                  "height": 65
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "6482d97c-12a8-4acf-81c0-3129befff14c",
+                "asset": "2",
+                "info": {
+                  "editorName": "_",
+                  "x": -11,
+                  "y": 1529
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "762ff819-ac60-4add-9de9-512ba1ccaa05",
+                "asset": "3",
+                "info": {
+                  "editorName": "_1",
+                  "x": 117,
+                  "y": 1529,
+                  "width": 512,
+                  "height": 128
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "93f09235-be32-465c-85a2-ecd9b2ffe6c2",
+                "asset": "4",
+                "info": {
+                  "editorName": "_61",
+                  "x": 629,
+                  "y": 1657
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "01fe93b3-8e38-4939-9841-cce0abafaad8",
+                "asset": "5",
+                "info": {
+                  "editorName": "_21",
+                  "x": -11,
+                  "y": 1657
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "d80915d9-b214-4194-b726-dd697a2924bb",
+                "asset": "6",
+                "info": {
+                  "editorName": "_8",
+                  "x": 117,
+                  "y": 1657,
+                  "width": 512,
+                  "height": 128
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "da4a4e5d-97cd-4dbf-92df-f64901c4d1aa",
+                "asset": "4",
+                "info": {
+                  "editorName": "_611",
+                  "x": 2037,
+                  "y": 1657
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "eb3a7647-8ba8-4bad-b3d1-042cc3a00538",
+                "asset": "5",
+                "info": {
+                  "editorName": "_211",
+                  "x": 1013,
+                  "y": 1657
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "f03e1e80-ae1c-44cc-a643-44638f40ad58",
+                "asset": "6",
+                "info": {
+                  "editorName": "_81",
+                  "x": 1141,
+                  "y": 1657,
+                  "width": 896,
+                  "height": 128
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "ab113335-cdb5-4813-9cb1-5347afc8afa6",
+                "asset": "7",
+                "info": {
+                  "editorName": "_84",
+                  "x": -46,
+                  "y": 1742,
+                  "width": 2245.2071533203125,
+                  "height": 201.0968017578125
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "01b776e3-0ee2-4ff2-80a7-56a07231592c",
+                "asset": "1",
+                "info": {
+                  "editorName": "Bush__2_1",
+                  "x": 1375,
+                  "y": 1462,
+                  "scale.x": 1.2436090513997489,
+                  "scale.y": 1.4061541519275604,
+                  "width": 133,
+                  "height": 65
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "6eeb86c7-2315-45e7-b9b6-916da1870b3a",
+                "asset": "8",
+                "info": {
+                  "editorName": "Bush",
+                  "x": 1508,
+                  "y": 1493
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "273a88ae-52e1-4ebe-94ac-f2171a332847",
+                "asset": "2",
+                "info": {
+                  "editorName": "_7",
+                  "x": 1111,
+                  "y": 1532
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "792ace26-24b6-4b0b-8e39-ae9f93a2a94c",
+                "asset": "3",
+                "info": {
+                  "editorName": "_11",
+                  "x": 1239,
+                  "y": 1532,
+                  "width": 512,
+                  "height": 128
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "31761fb8-33d1-447e-b369-4bad2fa2e820",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate",
+                  "x": 1266,
+                  "y": 1450
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "9cb26422-de34-4671-9442-ff197a87d9c9",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate1",
+                  "x": 1188,
+                  "y": 1450
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "884942ed-f239-4961-8174-ae9ca8a088bb",
+                "asset": "10",
+                "info": {
+                  "editorName": "_3",
+                  "x": 543,
+                  "y": 1393
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fe5815d8-8bbe-483e-abea-df0c651c3269",
+                "asset": "11",
+                "info": {
+                  "editorName": "_4",
+                  "x": 671,
+                  "y": 1393
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a7d6afc5-3eb6-4dd5-9e68-ace685f63ff2",
+                "asset": "11",
+                "info": {
+                  "editorName": "_41",
+                  "x": 799,
+                  "y": 1393
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "67fef135-f646-4ab1-bf35-b89f8062b2bf",
+                "asset": "11",
+                "info": {
+                  "editorName": "_411",
+                  "x": 927,
+                  "y": 1393
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "d399780a-f0c2-4cc9-9e1b-35f9b2812fa8",
+                "asset": "12",
+                "info": {
+                  "editorName": "_10",
+                  "x": 629,
+                  "y": 1529
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "a72915f6-88ca-4829-9464-cbebba1808e8",
+                "asset": "2",
+                "info": {
+                  "editorName": "_2",
+                  "x": 669,
+                  "y": 1265
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "22539cc6-1d27-4404-8288-3822a5c7bac0",
+                "asset": "3",
+                "info": {
+                  "editorName": "_5",
+                  "x": 797,
+                  "y": 1265
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1f44da59-4f5b-44c7-b72a-deaa1f331d93",
+                "asset": "12",
+                "info": {
+                  "editorName": "_6",
+                  "x": 925,
+                  "y": 1265
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "d4c7cf9c-a31d-49d7-af51-b16ee649adc7",
+                "asset": "13",
+                "info": {
+                  "editorName": "_51",
+                  "x": 1055,
+                  "y": 1393
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "c5a90341-7f4c-46d3-a602-9ce3b5a9c66a",
+                "asset": "12",
+                "info": {
+                  "editorName": "_9",
+                  "x": 1751,
+                  "y": 1532
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "64aed905-8581-4f7c-bf12-cc3cfe43f662",
+                "asset": "10",
+                "info": {
+                  "editorName": "_31",
+                  "x": 495,
+                  "y": 1037
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "efd65b8f-f111-4853-adce-45dfa75a1f24",
+                "asset": "11",
+                "info": {
+                  "editorName": "_42",
+                  "x": 623,
+                  "y": 1037
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "53ca574f-7e40-4f18-bf6e-84ca577f43da",
+                "asset": "13",
+                "info": {
+                  "editorName": "_52",
+                  "x": 750,
+                  "y": 1037
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "1e6e19ed-aa54-4e37-878e-cfeb481a58a7",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate3",
+                  "x": 580,
+                  "y": 961
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "ecc7c062-8fd4-41df-8a05-c7479024e920",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate4",
+                  "x": 657,
+                  "y": 961
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4a51ab71-aad3-48e6-8c3d-676a3993fe63",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate5",
+                  "x": 733,
+                  "y": 961
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "4e016519-b2ba-4efd-928a-c76661fb589b",
+                "asset": "9",
+                "info": {
+                  "editorName": "Crate2",
+                  "x": 1225,
+                  "y": 1373
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "a05af8ee-2bc1-4a72-8b9f-45791cd97ab9",
+          "asset": "14",
+          "info": {
+            "editorName": "player",
+            "editorPublic": true,
+            "x": 200.93919372558594,
+            "y": 1331.0816650390625,
+            "pivot.x": 1.9391937255859375,
+            "pivot.y": 0.0816650390625,
+            "anchor.x": 0.5,
+            "animations": [
+              {
+                "name": "walk",
+                "frameRate": 6,
+                "loop": true,
+                "public": true,
+                "frames": [
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15"
+                ]
+              },
+              {
+                "name": "jump",
+                "frameRate": 6,
+                "loop": true,
+                "frames": [
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ]
+              },
+              {
+                "name": "idle",
+                "frameRate": 4,
+                "loop": true,
+                "frames": ["0"]
+              }
+            ],
+            "body": {
+              "type": "ARCADE_RECT",
+              "offsetX": 24.572677612304688,
+              "offsetY": 108.1305923461914,
+              "collideWorldBounds": true,
+              "width": 67.91329956054688,
+              "height": 90.52034759521484
+            },
+            "width": 126,
+            "height": 198
+          }
+        },
+        {
+          "type": "spritesheet",
+          "id": "a8adbf74-1e1b-423e-b818-18a642e8a2e9",
+          "asset": "15",
+          "info": {
+            "editorName": "downline",
+            "editorPublic": true,
+            "x": 927,
+            "y": 539,
+            "scale.x": 0.66,
+            "scale.y": 0.66,
+            "animations": [{
+              "name": "walk",
+              "frameRate": 6,
+              "loop": true,
+              "frames": [
+                "6",
+                "1",
+                "4",
+                "9",
+                "1"
+              ]
+            }],
+            "body": {
+              "type": "ARCADE_RECT",
+              "offsetX": 14.029208421707153,
+              "offsetY": 14.647881269454956,
+              "mass": 0.02,
+              "collideWorldBounds": true,
+              "bounceX": 1,
+              "bounceY": 1,
+              "velocityX": 25,
+              "velocityY": 25,
+              "accelerationX": 5,
+              "accelerationY": 2,
+              "gravityX": 0.1,
+              "gravityY": 0.1,
+              "angularVelocity": 1,
+              "width": 132.88282465934753,
+              "height": 126.9884102344513
+            }
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "0302eed2-89f7-42a6-8737-d7929e4ba242",
+          "asset": "16",
+          "info": {
+            "editorName": "water",
+            "editorPublic": true,
+            "x": -51,
+            "y": 1644,
+            "scale.x": 1.0161180153885407,
+            "width": 2240.8822021484375,
+            "height": 99
+          }
+        },
+        {
+          "type": "group",
+          "id": "f8f10870-dc4f-41a5-903f-5d5bd3220c65",
+          "info": {
+            "editorName": "fruits",
+            "editorPublic": true,
+            "x": -11,
+            "y": -7,
+            "physicsGroup": true,
+            "setAll": [{
+              "key": "body.allowGravity",
+              "value": "false"
+            }],
+            "children": []
+          }
+        },
+        {
+          "type": "group",
+          "id": "23b2b9aa-68e3-4446-96cd-6729c4223e37",
+          "info": {
+            "editorName": "front",
+            "x": -11,
+            "y": -7,
+            "setAll": [],
+            "children": [{
+              "type": "atlas-sprite",
+              "id": "c2b231e7-0899-4d48-affb-a46f192128de",
+              "asset": "8",
+              "info": {
+                "editorName": "Bush1",
+                "x": 36,
+                "y": 1490
+              }
+            }]
+          }
+        },
+        {
+          "type": "group",
+          "id": "a678bdb2-3f6b-44a9-bf7e-78f3422172b0",
+          "info": {
+            "editorName": "products",
+            "editorPublic": true,
+            "physicsGroup": true,
+            "setAll": [{
+              "key": "body.allowGravity",
+              "value": "false"
+            }],
+            "children": [
+              {
+                "type": "atlas-sprite",
+                "id": "ddd0b832-d022-42f8-bb27-c750ae0e137b",
+                "asset": "17",
+                "info": {
+                  "editorName": "products_8",
+                  "x": 640,
+                  "y": 686,
+                  "data": "{\n\"type\":\"lumi\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fe08f84d-4dd7-4e13-8b9f-f638c8f541e2",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_7",
+                  "x": 1084,
+                  "y": 1256,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "249881a2-7633-4685-ab2b-7a631b0030be",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_6",
+                  "x": 952,
+                  "y": 1122,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "fded8d02-7329-42e4-b11e-5543b1c43cd8",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_5",
+                  "x": 880,
+                  "y": 1124,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "05badddb-c56a-4ed4-a847-752d3508f688",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_4",
+                  "x": 815,
+                  "y": 1125,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "0d773118-c056-4caa-9bd7-c154e4308359",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_3",
+                  "x": 751,
+                  "y": 1125,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "196ea8be-115f-4f46-bd4b-ee40297e8c0b",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_2",
+                  "x": 691,
+                  "y": 1125,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "3f2d476b-4c8e-4f6d-ba87-ee6d176011e9",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_1",
+                  "x": 442,
+                  "y": 1393,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "6c897e9d-1da1-40ca-9c9a-e90aac7618c9",
+                "asset": "18",
+                "info": {
+                  "editorName": "products_",
+                  "x": 377,
+                  "y": 1392,
+                  "scale.x": 0.5,
+                  "scale.y": 0.5,
+                  "data": "{\n\"type\":\"toothpaste\"\n}"
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "b780fc2d-77fa-4b9c-8c70-8a80f45d15cf",
+                "asset": "17",
+                "info": {
+                  "editorName": "products_9",
+                  "x": 1694,
+                  "y": 1275,
+                  "data": "{\n\"type\":\"lumi\"\n}"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "c95f6bdc-4891-4f1b-902f-6d0e2dd4bef8",
+          "info": {
+            "editorName": "collisionLayer",
+            "editorPublic": true,
+            "x": -13,
+            "y": 9,
+            "physicsGroup": true,
+            "setAll": [
+              {
+                "key": "body.immovable",
+                "value": "true"
+              },
+              {
+                "key": "body.allowGravity",
+                "value": "false"
+              },
+              {
+                "key": "renderable",
+                "value": "false"
+              },
+              {
+                "key": "body.checkCollision.down",
+                "value": "false"
+              }
+            ],
+            "children": [
+              {
+                "type": "tileSprite",
+                "id": "4cfda205-cece-42ec-b7f1-508b389850aa",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 3,
+                  "y": 1543,
+                  "width": 759.6111068725586,
+                  "height": 38.3333740234375
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "c758c356-a7f8-4cf1-bcce-850cad8b6226",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 511,
+                  "y": 1043,
+                  "width": 382.2159652709961,
+                  "height": 17.3333740234375
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "539ad56f-0c5f-4720-9312-d8a5420b6d12",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 687,
+                  "y": 1265,
+                  "width": 378.2965316772461,
+                  "height": 26.18060302734375
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "4e57c1b5-b3fd-4c86-bbea-cf10854bfc8d",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 594,
+                  "y": 948,
+                  "width": 228.8677978515625,
+                  "height": 14.8726806640625
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "84a63460-c0f1-4b82-85f1-b25ca58bbd2d",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 1241,
+                  "y": 1366,
+                  "width": 72.9166259765625,
+                  "height": 25
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "503012cd-ce98-450e-b8ab-0a71b89b1835",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 1202,
+                  "y": 1448,
+                  "scale.x": 2.038874439941794,
+                  "width": 72.9166259765625,
+                  "height": 25
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "f086b313-7f8c-4ad1-8439-28a29d6300dc",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": -12,
+                  "y": 1711,
+                  "width": 2200.993938446045,
+                  "height": 25
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "e98cec95-b8cd-422c-b2d8-d1c06b0ca888",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics",
+                  "x": 1130,
+                  "y": 1537,
+                  "width": 759.6111068725586,
+                  "height": 38.3333740234375
+                }
+              },
+              {
+                "type": "atlas-sprite",
+                "id": "6b7f7e7a-67de-4322-9cd9-0c0c90e4c34d",
+                "asset": "19",
+                "info": {
+                  "editorName": "physics1",
+                  "x": 547,
+                  "y": 1400,
+                  "scale.x": 25.186472515587052
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {
+    "0": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "BG"
+    },
+    "1": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "objects",
+      "sprite": "Bush (2)"
+    },
+    "2": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "1"
+    },
+    "3": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "2"
+    },
+    "4": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "16"
+    },
+    "5": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "12"
+    },
+    "6": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "9"
+    },
+    "7": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "18"
+    },
+    "8": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "objects",
+      "sprite": "Bush (1)"
+    },
+    "9": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "objects",
+      "sprite": "Crate"
+    },
+    "10": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "13"
+    },
+    "11": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "14"
+    },
+    "12": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "3"
+    },
+    "13": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "15"
+    },
+    "14": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "player",
+      "sprite": "0"
+    },
+    "15": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "downline",
+      "sprite": "0"
+    },
+    "16": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "17"
+    },
+    "17": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "products",
+      "sprite": "products_01"
+    },
+    "18": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "products",
+      "sprite": "products_02"
+    },
+    "19": {
+      "file": "assets/pack.json",
+      "section": "level",
+      "asset": "tiles",
+      "sprite": "physics"
+    }
+  },
+  "prefab-table": {}
+}
